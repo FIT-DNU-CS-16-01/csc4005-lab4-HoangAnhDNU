@@ -84,7 +84,13 @@ UrbanSound8K/
 
 Có thể truyền đường dẫn tới thư mục đã giải nén hoặc file `.zip`.
 
-Ví dụ:
+Ví dụ (Windows):
+
+```bash
+python -m src.train --config configs/baseline_logmel_crnn.json --data_dir "C:\duong_dan\UrbanSound8K"
+```
+
+Ví dụ (macOS/Linux):
 
 ```bash
 python -m src.train --config configs/baseline_logmel_crnn.json --data_dir /duong_dan/UrbanSound8K
@@ -178,9 +184,9 @@ Log cuối run:
 
 ## 10. Checklist nộp bài
 
-- [ ] Có ít nhất 1 run CRNN baseline trên W&B
-- [ ] Có learning curves
-- [ ] Có confusion matrix
-- [ ] Có so sánh với kết quả Lab 3 1D-CNN
-- [ ] Có nhận xét lớp âm thanh nào dễ nhầm
-- [ ] Có đề xuất ít nhất 2 hướng cải thiện mô hình
+- [x] Có ít nhất 1 run CRNN baseline trên W&B (https://wandb.ai/hoanganhdnu-dainam-vietnam/csc4005-lab4-urbansound8k-crnn/runs/mqskm0iz)
+- [x] Có learning curves (outputs/logmel_crnn_gru_baseline/curves.png, REPORT_TEMPLATE.md section 6)
+- [x] Có confusion matrix (outputs/logmel_crnn_gru_baseline/confusion_matrix.png, REPORT_TEMPLATE.md section 7)
+- [x] Có so sánh với kết quả Lab 3 1D-CNN (REPORT_TEMPLATE.md section 8: Lab 3 MFCC 55.5%, Lab 3 log-mel 63.9%, Lab 4 CRNN 75.5%)
+- [x] Có nhận xét lớp âm thanh nào dễ nhầm (REPORT_TEMPLATE.md section 7: siren 53% recall, nhầm với children_playing)
+- [x] Có đề xuất ít nhất 2 hướng cải thiện mô hình (REPORT_TEMPLATE.md section 9: BiLSTM, tăng CNN depth, data augmentation mạnh hơn)

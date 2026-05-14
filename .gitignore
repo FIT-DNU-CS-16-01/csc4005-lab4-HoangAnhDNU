@@ -6,6 +6,33 @@ wandb/
 outputs/*
 !outputs/.gitkeep
 data/
+UrbanSound8K/
 *.zip
 .tmp_ci_urbansound/
 .DS_Store
+Thumbs.db
+
+# Model checkpoints & large binaries
+*.pt
+*.pth
+*.ckpt
+*.h5
+*.pkl
+*.safetensors
+
+# Cached features / large arrays
+*.npy
+*.npz
+
+# Jupyter notebook checkpoints
+.ipynb_checkpoints/
+
+# IDE configs
+.idea/
+.vscode/
+
+# Audio files ( safeguard — dataset should live outside repo )
+*.wav
+*.mp3
+*.flac
+*.ogg
